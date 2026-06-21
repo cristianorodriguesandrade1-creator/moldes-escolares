@@ -1,0 +1,108 @@
+============================================================
+COMANDO FINAL PARA FAZER PUSH PARA GITHUB
+============================================================
+
+RESULTADO DO QUE JÁ FOI FEITO (via claude):
+✅ Git inicializado
+✅ 61 arquivos adicionados
+✅ Commit criado com mensagem profissional
+✅ Remote GitHub adicionado
+✅ Tudo pronto para push
+
+O QUE FALTA: Você executar O PUSH no seu computador (com internet + credenciais)
+
+============================================================
+OPÇÃO 1: COPIAR E COLAR (MAIS FÁCIL)
+============================================================
+
+Abra PowerShell e execute EXATAMENTE isto:
+
+cd "E:\-PROJETOS CLAUDE-\site remunerado"
+git push -u origin main
+
+Pronto! GitHub pedirá seu usuário/senha ou token.
+
+============================================================
+OPÇÃO 2: PASSO A PASSO COMPLETO (Se der erro)
+============================================================
+
+1. Abra PowerShell como Administrador
+   - Pressione Win + X
+   - Selecione "Windows PowerShell (Admin)"
+
+2. Navegue até a pasta:
+   cd "E:\-PROJETOS CLAUDE-\site remunerado"
+
+3. Verifique que git está ali:
+   git status
+
+4. Veja qual branch está:
+   git branch
+
+5. Veja qual remote está configurado:
+   git remote -v
+
+6. Se aparecer origin → https://github.com/cristianorodriguesandrade1-creator/moldes-escolares.git
+   Então execute:
+   git push -u origin main
+
+7. GitHub pedirá autenticação:
+
+   Username: seu_username_github
+
+   Password: OPÇÃO A OU B:
+
+   OPÇÃO A (Recomendado - Token):
+   - Vá para: https://github.com/settings/tokens
+   - "Generate new token" (classic)
+   - Selecione "repo" (full control of private repositories)
+   - Generate e COPIE o token
+   - Volte aqui e COLE como password
+
+   OPÇÃO B (Senha direta):
+   - Cole sua senha do GitHub
+   - (pode não funcionar se tem 2FA ativado)
+
+8. Após sucesso, verá:
+   "Branch 'main' set up to track 'origin/main'."
+   ✅ SUCESSO!
+
+============================================================
+SE TIVER DÚVIDAS: USO GitHub Desktop
+============================================================
+
+Se PowerShell for complicado:
+
+1. Baixe: https://desktop.github.com/
+2. Instale e faça login
+3. File → Clone Repository
+4. URL: https://github.com/cristianorodriguesandrade1-creator/moldes-escolares
+5. Local Path: E:\-PROJETOS CLAUDE-\site remunerado
+6. Clique: Clone
+7. GitHub Desktop fará tudo automaticamente!
+
+============================================================
+RESULTADO ESPERADO
+============================================================
+
+Após fazer push com sucesso:
+
+✅ Acessar: https://github.com/cristianorodriguesandrade1-creator/moldes-escolares
+✅ Ver todos os 61 arquivos listados
+✅ Ver commit com mensagem "Initial: Moldes Escolares..."
+
+Depois disso:
+👉 Configure no Vercel (PROMPT_CLAUDE_CHROME.md tem instruções)
+👉 Site estará ao vivo em https://moldes-escolares.vercel.app
+
+============================================================
+ATALHO FINAL
+============================================================
+
+Se quer fazer SUPER RÁPIDO, abra PowerShell e execute isto:
+
+cd "E:\-PROJETOS CLAUDE-\site remunerado" && git push -u origin main
+
+Isso é TUDO que você precisa fazer!
+
+============================================================

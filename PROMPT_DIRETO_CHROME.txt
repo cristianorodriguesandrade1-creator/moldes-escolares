@@ -1,0 +1,113 @@
+=====================================================================
+PROMPT PARA CLAUDE CHROME - COPIE E COLE DIRETAMENTE
+=====================================================================
+
+Você é um agente de deployment. Sua tarefa é publicar o site "Moldes Escolares" e deixá-lo 100% funcional e operacional.
+
+PROJETO COMPLETADO:
+- Local: E:\-PROJETOS CLAUDE-\site remunerado\
+- 60+ arquivos criados
+- 13 fases de desenvolvimento completadas
+- Código 100% pronto para deployment
+- Falta: publicar, configurar e validar
+
+OBJETIVO FINAL:
+Site "Moldes Escolares" acessível em https://moldes-escolares.vercel.app com:
+✅ Site ao vivo funcionando
+✅ Database Supabase conectado
+✅ Homepage carregando dados
+✅ Admin funcional (login + CRUD)
+✅ Busca funcionando
+✅ SEO pronto (sitemap + robots.txt)
+✅ Google Search Console monitorando
+✅ Google Analytics rastreando
+
+TAREFAS (Execute nesta ordem):
+
+1. GITHUB & REPOSITÓRIO (30 min)
+   - Acessar github.com/new
+   - Criar repo "moldes-escolares"
+   - Clonar para local
+   - Copiar arquivos de E:\-PROJETOS CLAUDE-\site remunerado\ para repo
+   - Git add . && git commit -m "Initial: Moldes Escolares"
+   - Git push origin main
+
+2. SUPABASE PRODUCTION (20 min)
+   - Acessar supabase.com
+   - Criar novo projeto
+   - SQL Editor → copiar schema.sql (arquivo) → colar e executar
+   - Verificar 7 tabelas criadas (categories com 15 pré-inseridas)
+   - Project Settings → API → copiar e salvar 3 credenciais:
+     * NEXT_PUBLIC_SUPABASE_URL
+     * NEXT_PUBLIC_SUPABASE_ANON_KEY
+     * SUPABASE_SERVICE_ROLE_KEY
+
+3. VERCEL DEPLOYMENT (20 min)
+   - Acessar vercel.com
+   - Login com GitHub
+   - Add New → Project
+   - Import Git Repository → selecionar moldes-escolares
+   - Project Settings → Environment Variables → adicionar 3 vars do Supabase
+   - Deploy e aguardar conclusão
+   - Testar site: https://seu-projeto.vercel.app
+
+4. TESTAR SITE (15 min)
+   Verificar se funciona:
+   - [ ] Homepage / carrega logo + hero + categorias
+   - [ ] /categoria/festa-junina carrega
+   - [ ] /busca?q=teste funciona
+   - [ ] /admin/login aparece form
+   - [ ] /sobre, /contato, /privacidade carregam
+   - [ ] /sitemap.xml retorna XML
+   - [ ] /robots.txt retorna texto
+   - F12 → source → og:title presente
+   - F12 → source → schema JSON-LD presente
+
+5. GOOGLE SEARCH CONSOLE (15 min)
+   - search.google.com/search-console
+   - Add Property → URL: seu-projeto.vercel.app
+   - Download HTML verification file
+   - Colocar em public/
+   - Git add . → commit → push (Vercel auto-deploy)
+   - Voltar Search Console → Verify
+   - Sitemaps → Add → seu-projeto.vercel.app/sitemap.xml → Submit
+
+6. GOOGLE ANALYTICS (Opcional, 10 min)
+   - analytics.google.com → Create Account
+   - Website: seu-projeto.vercel.app
+   - Copiar Measurement ID (G-XXXXXXXXXX)
+   - app/layout.tsx → procurar {/* Google Analytics */} → substituir ID
+   - Git commit + push
+
+7. CRIAR USUÁRIO ADMIN (5 min)
+   - Supabase → Authentication → Users
+   - Invite user: admin@example.com / Senha123!@#
+   - Testar login em /admin/login
+
+8. ADICIONAR DADOS INICIAIS (30 min, opcional)
+   - Login em /admin/login
+   - Novo Molde: "Molde Boi Bumba", slug: "molde-boi-bumba", cat: Festa Junina
+   - Repetir 5-10 vezes para ter conteúdo visível
+   - OU executar SQL INSERT direto no Supabase
+
+VERIFICAÇÃO FINAL:
+✅ Site ao vivo: https://seu-projeto.vercel.app
+✅ Homepage com dados carregando
+✅ Admin funcional (/admin/login)
+✅ Busca funcional (/busca)
+✅ Sitemap submetido Search Console
+✅ Sem erros console (F12)
+✅ Mobile responsivo (F12 → Device Toolbar)
+✅ Todas páginas carregam (/sobre, /contato, etc)
+
+DOCUMENTAÇÃO DE REFERÊNCIA:
+- VERCEL_DEPLOYMENT.md → deploy passo-a-passo detalhado
+- SEARCH_CONSOLE_GUIDE.md → SEO completo
+- PROMPT_CLAUDE_CHROME.md → este prompt em longo (mais detalhes)
+- schema.sql → estrutura database
+
+TEMPO TOTAL: 1.5-2 horas até site 100% operacional
+
+SUCESSO = Site moldes-escolares.vercel.app funcionando com dados do Supabase, admin acessível, Google rastreando, e pronto para receber tráfego!
+
+=====================================================================
