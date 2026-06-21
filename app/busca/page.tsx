@@ -1,12 +1,12 @@
 "use client";
 
 import { useSearchParams } from "next/navigation";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState , Suspense} from "react";
 import { createClient } from "@/lib/supabase/client";
 import Link from "next/link";
 import { Download, Search } from "lucide-react";
 
-export default function BuscaPage() {
+function BuscaContent() {
   const searchParams = useSearchParams();
   const query = searchParams.get("q") || "";
   const supabase = createClient();
@@ -147,4 +147,8 @@ export default function BuscaPage() {
       </div>
     </div>
   );
+}
+
+export default function BuscaPage() {
+    return React.createElement(Suspense, { fallback: null }, React.createElement(BuscaContent, null));
 }
