@@ -7,4 +7,3 @@ export function createClient() {
         );
 }
 
-export const supabaseClient = createClient();
