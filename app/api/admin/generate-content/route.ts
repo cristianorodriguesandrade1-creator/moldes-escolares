@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 import { createClient } from "@/lib/supabase/server";
 import { generateCompleteContent } from "@/lib/contentGenerator";
 import { NextResponse } from "next/server";
